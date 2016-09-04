@@ -1,0 +1,240 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="TR">
+<head>
+<title>ModalDialog Enhanced</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-9" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<style type="text/css">
+	 @import url("Master.css");
+</style>
+<script type="text/javascript" src="sardalya.js"></script>
+<script type="text/javascript">
+	/* The global modal dialog stub */
+	var g_Modal = null;
+
+	window.onload=function()
+	{
+		/* Sweep unnecessary empty text nodes. */
+		DOMManager.sweep();
+
+		/*
+		 * Attach supporting css bind required
+		 * classes for transparency support in Opera.
+		 */
+		addExtensionsForOpera();
+
+		/* Attach opacity css. */
+		attachOpacityCSS();
+
+		/* Adjust height. */
+		adjustHeight();
+
+		/* Create the modal dialog */
+		g_Modal=new ModalDialog("ModalBG","DialogWindow",
+			"DialogContent","DialogActionBtn");
+
+		/* Bind an event listener to double-click event. */
+		EventHandler.addEventListener(document,"dblclick",document_dblclick);
+
+		/* Re-adjust height on window resize */
+		EventHandler.addEventListener(window,"resize",window_resize);
+	};
+
+	function window_resize(evt)
+	{
+		adjustHeight();
+	}
+
+	function adjustHeight()
+	{
+		var intWindowHeight=WindowObject.getInnerDimension().getY();
+		var dynModalBG=new DynamicLayer("ModalBG");
+		var intModalHeight=dynModalBG.getHeight();
+
+		if(intModalHeight<intWindowHeight)
+		{
+			dynModalBG.setHeight(intWindowHeight);
+		}
+	}
+
+	function addExtensionsForOpera()
+	{
+		/* classes for opera */
+		var ModalBG=new CBObject("ModalBG").getObject();
+		if(typeof(window.opera)!="undefined")
+		{
+			ModalBG.className="modalOpera";
+		}
+	}
+
+	function attachOpacityCSS()
+	{
+		/*
+		 * CSS for opacity support
+		 * Note that this can be directly added to the body.
+		 * If you do not care about blindly adhering to standards
+		 * you can directly include the rules into Master.css
+		 *
+		 * Do I care? Yes and no.(visit http://www.sarmal.com/Exceptions.aspx
+		 * to learn how I feel about it).
+		 */
+		var opacityCSS = document.createElement("link");
+		opacityCSS.type="text/css";
+		opacityCSS.rel="stylesheet";
+		opacityCSS.href="Opacity.css";
+		document.getElementsByTagName("head")[0].appendChild(opacityCSS);
+	}
+
+	function document_dblclick(evt)
+	{
+		/* create an AJAX request */
+		var ajax = _.ajax();
+		/*
+		 * Note that _.ajax(); is a shorthand notation 
+		 * for new XHRequest();
+		 * Visit http://sardalya.pbwiki.com/Shortcuts details.
+		 */
+
+		/* 
+		 * You can add as many fields as you like to the post data. 
+		 * Normally the server will use this data to create an
+		 * output that makes sense which may be an XML, a JSON String
+		 * or an HTML String.
+		 */
+		ajax.removeAllFields();
+		ajax.addField("name","John");
+		ajax.addField("surname","Doe");
+
+		ajax.oncomplete=ajax_complete;
+		ajax.onerror=ajax_error;
+
+		g_Modal.show("Fetching data... Please wait...");
+
+		/*
+		 * Disable close action if you want to force the user 
+		 * to wait for the outcome of the AJAX request.
+		 * Although it is generally not recommended 
+		 * this may be necessary at certain times.
+		 */
+		g_Modal.disableClose();
+
+		/* Post data to the server. */
+		ajax.get("externalScript.html");
+
+		/* Stop event propagation. */
+		new EventObject(evt).cancelDefaultAction();
+	}
+
+	/* Triggered when a successful AJAX response comes from the server.*/
+	function ajax_complete(strResponseText,objResponseXML)
+	{
+		g_Modal.show(strResponseText);
+		
+		/* Re-activate close button. */
+		g_Modal.enableClose();
+	}
+
+	/* Triggered when server generates an error. */
+	function ajax_error(intStatus,strStatusText)
+	{
+		g_Modal.show("Error code: ["+ intStatus+ "] error message: [" + 
+			strStatusText + "].");
+
+		/* Re-activate close button. */
+		g_Modal.enableClose();
+	}
+</script>
+</head>
+<body>
+	<div id="ModalBG"></div>
+	<div id="DialogWindow">
+		<div id="DialogHeader">
+			<span id="DialogTitle">Title comes here</span>
+			<img id="DialogActionBtn"  src="icn_close.png" alt="close icon" title="" />
+		</div>
+		<div id="DialogIcon"><img id="DialogIcon" src="icn_alert.png" alt="alert icon" title="" /></div>
+		<div id="DialogContent">...</div>
+	</div>
+
+	<div>
+			<h1>Modal Dialog Test</h1>
+			<p>
+			<strong>DOUBLE CLICK ANYWHERE ON THE DOCUMENT TO INITIATE THE MODAL DIALOG</strong><br /><br />
+			<img src="avatar.png" />
+			<img src="avatar.png" />
+			<img src="avatar.png" />
+
+			<select id="Select1">
+			<option value="1">option 1</option>
+			<option value="2">option 2</option>
+			<option value="3">option 3</option>
+			<option value="4">option 4</option>
+			<option value="5">option 5</option>
+			</select>
+
+			<select id="Select2">
+			<option value="1">option 1</option>
+			<option value="2">option 2</option>
+			<option value="3">option 3</option>
+			<option value="4">option 4</option>
+			<option value="5">option 5</option>
+			</select>
+
+			<select id="Select3">
+			<option value="1">option 1</option>
+			<option value="2">option 2</option>
+			<option value="3">option 3</option>
+			<option value="4">option 4</option>
+			<option value="5">option 5</option>
+			</select>
+
+
+			<img src="avatar.png" />
+			<img src="avatar.png" />
+			<img src="avatar.png" />
+
+			Lorem ipsum dolor sit amet,
+
+			consectetuer adipiscing elit. Fusce vel erat. Phasellus eu elit. Quisque dictum massa id nulla. Nunc at nisl vulputate nisl imperdiet imperdiet. Morbi in enim. In condimentum pulvinar mi. Pellentesque eros. Quisque porttitor dignissim mi. Donec non tortor non lacus facilisis luctus. Sed ipsum. Ut nulla magna, ultrices at, adipiscing sed, rutrum blandit, purus. Pellentesque iaculis. Donec hendrerit, lectus sit amet pellentesque viverra, justo libero sollicitudin ipsum, quis vestibulum mauris sapien eu nisi. Cras dolor felis, rutrum varius, ultrices et, iaculis id, odio. Duis vestibulum, ante id sodales mollis, nulla libero sollicitudin enim, a interdum orci nisi at felis. Proin pede quam, hendrerit tincidunt, congue eget, placerat pulvinar, metus. Nullam pede. Vestibulum sit amet tellus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos.
+			</p>
+
+			<p>
+			<img src="avatar.png" />
+			<img src="avatar.png" />
+			<img src="avatar.png" />
+
+			<select id="Select5">
+			<option value="1">option 1</option>
+			<option value="2">option 2</option>
+			<option value="3">option 3</option>
+			<option value="4">option 4</option>
+			<option value="5">option 5</option>
+			</select>
+
+			<select id="Select6">
+			<option value="1">option 1</option>
+			<option value="2">option 2</option>
+			<option value="3">option 3</option>
+			<option value="4">option 4</option>
+			<option value="5">option 5</option>
+			</select>
+
+			<select id="Select7">
+			<option value="1">option 1</option>
+			<option value="2">option 2</option>
+			<option value="3">option 3</option>
+			<option value="4">option 4</option>
+			<option value="5">option 5</option>
+			</select>
+
+
+			<img src="avatar.png" />
+			<img src="avatar.png" />
+			<img src="avatar.png" />
+
+
+			Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Fusce vel erat. Phasellus eu elit. Quisque dictum massa id nulla. Nunc at nisl vulputate nisl imperdiet imperdiet. Morbi in enim. In condimentum pulvinar mi. Pellentesque eros. Quisque porttitor dignissim mi. Donec non tortor non lacus facilisis luctus. Sed ipsum. Ut nulla magna, ultrices at, adipiscing sed, rutrum blandit, purus. Pellentesque iaculis. Donec hendrerit, lectus sit amet pellentesque viverra, justo libero sollicitudin ipsum, quis vestibulum mauris sapien eu nisi. Cras dolor felis, rutrum varius, ultrices et, iaculis id, odio. Duis vestibulum, ante id sodales mollis, nulla libero sollicitudin enim, a interdum orci nisi at felis. Proin pede quam, hendrerit tincidunt, congue eget, placerat pulvinar, metus. Nullam pede. Vestibulum sit amet tellus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos.
+			</p>
+	</div>
+</body>
+</html>

@@ -1,0 +1,59 @@
+By using this software package, you agree, declare and accept 
+to be bound by the following terms:                           
+                                                              
+1. This software package is distributed under                 
+"Attribution-NonCommercial-ShareAlike 2.0                     
+(http://creativecommons.org/licenses/by-nc-sa/2.0/)" license. 
+                                                              
+The details of the license are as follows:                    
+                                                              
+        1.1. Attribution: You must give the original author   
+        (Volkan Özçelik - volkan@samal.com) credit.           
+                                                              
+        1.2. Noncommercial: You may not use this work for     
+        commercial purposes.                                  
+                                                              
+        1.3. Share Alike: If you alter, transform, or build   
+        upon this work, you may distribute the resulting work 
+        only under a license identical to this one.           
+                                                              
+        1.4. For any reuse or distribution, you must make     
+        clear to  others the license terms of this work.      
+                                                              
+        1.5. Any of these conditions can be waived            
+        if you get permission from the copyright holder.      
+                                                              
+2. This software package is email-ware. That is, if you alter 
+the contents of the package,                                  
+add/modify the code, you should send the altered code         
+to the author via e-mail (volkan@sarmal.com).                 
+                                                              
+3. Like any developer, the author would be glad if you give   
+credit to him  after using his code/know-how. However,        
+the author's real aim is to share knowledge, help others      
+improve, and listen to others' comments  so that he can       
+improve himself.                                              
+                                                              
+4. If you do any change in the code, please comment them      
+indicating, date of modification and a brief explanation      
+of what is done and send it back to volkan@sarmal.com.        
+                                                              
+5. The author does neither claim the efficiency, scalability, 
+sensitivity and accuracy of this sofware nor it's suitability 
+to your needs. The author does not take any responsibility    
+for any direct or indirect damage that may occur in your      
+system by using this sofware package.                         
+                                                              
+6. THIS SOFTWARE PACKAGE IS DISTRIBUTED "AS IS".              
+NO WARRANTY IS GIVEN FOR IT AND UNDER NO CONDITION MAY        
+SARMAL.COM OR THE AUTHOR OF THIS SOFTWARE PACKAGE             
+(Volkan Özçelik - volkan@sarmal.com) BE RESPONSIBLE FOR       
+ANY DIRECT, INDIRECT OR COINCIDENTIAL DAMAGES THAT MAY OCCUR  
+FROM THE USAGE OF IT. THE USAGE PURPOSE OF THIS SOFTWARE      
+PACKAGE AND THE CONSEQUENCES OF THIS USAGE (EVEN IF THEY      
+ARE EXPLICITY DECLARED A PRIORI) ARE THE USER'S               
+RESPONSIBILITY.                                               
+                                                              
+7. At any time, sarmal.com may change these terms and         
+conditions. You, as the user, agree to be bound by the        
+latest terms and conditions.                                  

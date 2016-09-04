@@ -1,0 +1,81 @@
+body,h1,h2,h3,h4,h5,h6,p,pre,ol,ul,dl,dt,dd,li,form
+{
+	margin: 0;
+	padding: 10px;
+	font-weight: normal;
+}
+
+body
+{
+	font-family:Verdana,Arial,Helvetica,sans-serif;
+	font-size:0.8em;
+}
+
+select
+{
+	border: 2px #ffffcc inset;
+	background:#ffffcc;
+	margin:5px;
+}
+
+.modalWrap
+{
+	border: 2px #ffffcc inset;
+	background:#ffffcc;
+	margin:5px;
+}
+
+/* transparency support for Opera */
+.modalOpera
+{
+	background-image: url("maskBg.png") !important;
+}
+
+/* dialog window */
+#DialogWindow
+{
+	border: 1px #FFFFFF outset;
+	width: 550px;
+	display: none;
+	background: #FFFFFF;
+	z-index: 1000;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+/* dialog content */
+#DialogContent
+{
+	float: right;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	margin-top: 24px;
+	width: 450px;
+	display: block;
+	font-size: 90%;
+}
+
+/* icon */
+#DialogIcon
+{
+	padding: 10px;
+	float: left;
+}
+
+#DialogHeader
+{
+	border-bottom: 1px #00449E outset;
+	background: #00449E;
+	text-align: right;
+}
+#DialogTitle
+{
+	float: left;
+	padding: 8px;
+	color: #FFFFFF;
+}
+
+#DialogActionBtn
+{
+	cursor:pointer;
+}

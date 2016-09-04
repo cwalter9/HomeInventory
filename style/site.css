@@ -1,0 +1,18 @@
+.bodytxt {FONT-SIZE: 12px; COLOR: #666699; FONT-FAMILY: Arial, Helvetica, sans-serif}
+.bodylinks {FONT-SIZE: 12px; COLOR: #996666; FONT-FAMILY: Arial, Helvetica, sans-serif}
+.bodyboldcol {FONT-WEIGHT: normal; FONT-SIZE: 12px; COLOR: #996666; FONT-FAMILY: Arial, Helvetica, sans-serif}
+.bodytxtsml {FONT-SIZE: 10px; COLOR: #666699; FONT-FAMILY: Arial, Helvetica, sans-serif}
+.bodytxtsmlcol {FONT-SIZE: 10px; COLOR: #996666; FONT-FAMILY: Arial, Helvetica, sans-serif}
+.sml_links {FONT-SIZE: 10px; COLOR: #996666; FONT-FAMILY: Arial, Helvetica, sans-serif}
+.xmas_txt {FONT-SIZE: 11px; COLOR: #61755e; FONT-FAMILY: Arial, Helvetica, sans-serif}
+.xmas_txtsml {FONT-SIZE: 10px; COLOR: #bd736b; FONT-FAMILY: Arial, Helvetica, sans-serif; TEXT-DECORATION: none}
+.xmas_linx {FONT-SIZE: 11px; COLOR: #b56b6b; FONT-FAMILY: Arial, Helvetica, sans-serif}
+
+.bodybolbol {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: bold;
+	text-transform: capitalize;
+	color: #996666;
+}

@@ -1,0 +1,6 @@
+INSTALLATION
+
+Please move this folder to the document root of the web server 
+or add a virtual directory to this folder.
+Then open a browser to open index.php, it will call the 
+installer automatically.

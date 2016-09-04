@@ -1,0 +1,38 @@
+s@rdalya
+.: s@rm@l Dinamik Altyapýsý :.
+
+Aþaðýdaki metin,
+s@rdalya'nýn (s@rmal dinamik altyapýsý) kullaným þartlarýný içermektedir.
+
+* * *
+
+Bu yazýlým paketini kullanarak, aþaðýda yazýlý kurallarý okuduðunuzu, anladýðýnýzý ve bu kurallarýn sizi baðladýðýný kabul ve beyan edersiniz.
+
+1. Bu yazýlým paketi "Attribution-NonCommercial-ShareAlike 2.0 (http://creativecommons.org/licenses/by-nc-sa/2.0/)" lisansý ile daðýtýlmaktadýr. Lisansýn detaylarý aþaðýdaki gibidir:
+
+1.1. Attribution: Yazýlým paketini kullanýrken, yazarýný
+(Volkan Özçelik - volkan@samal.com) referans göstermelisiniz.
+1.2. Noncommercial: Bu yazýlým paketini ticari amaçlar için kullanamazsýnýz.
+1.3. Share Alike: Eðer bu yazýlým paketini deðiþtirir, dönüþtürür ve/ya bu yazýlým paketini temel alan baþka bir eser ortaya çýkarýrsanýz, bu eseri yalnýzca bu lisansa (http://creativecommons.org/licenses/by-nc-sa/2.0/) eþdeðer bir lisans altýnda daðýtabilirsiniz. 
+1.4. Herhangi bir yeniden kullaným, yeniden daðýtým için, daðýttýðýnýz kiþilere bu lisans koþullarýný açýkça belirtmelisiniz.
+1.5. Yukarýdaki koþullardan biri ve/ya birkaçý lisans sahibinin (Volkan Özçelik - volkan@sarmal.com) açýk iznini almanýz durumunda yoksayýlabilir.
+
+2. Bu paket e-posta yanlý kullanýmý esas almaktadýr. Yani, eðer paketin içeriðini deðiþtirirseniz, dosyalarýn  deðiþtirilmiþ sürümünü yazara [volkan@sarmal.com] elektronik posta yoluyla göndermeniz gerekmektedir.
+
+3. Yazdýðý kodun tamamýnýn ve/ya bir parçasýnýn kullanýldýðý yerlerde þahsýna referans verilmesinden herkes gibi yazar da mutlu olur. Fakat yazarýn asýl amacý, kendisine gerek içerik gerekse yorumlarýyla katkýda bulunan  kiþilere yardým edebilmektir.
+
+4. Eðer kodda herhangi bir deðiþiklik yaparsanýz deðiþiklikleri tarihleriyle beraber kod içerisinde yorumlandýrýnýz.
+
+5. Bu yazýlým paketi hiçbir garanti gözetmeksizin daðýtýlmaktadýr. Yazar, bu yazýlým paketi dahilindeki modüllerin verimliliði, hassaslýðý ve doðruluðu konusunda ve bu yazýlým paketinin kullanýlmasýya sisteminizde oluþabilecek doðrudan ve/ya dolaylý herhangi bir sorun karþýsýnda kesinlikle sorumluluk kabul etmez.
+
+6. BU PAKETTEKÝ TÜM VERÝ HÝÇBÝR GARANTÝ VERÝLMEKSÝZÝN "OLDUÐU GÝBÝ" DAÐITILMAKTADIR. PAKET ÝÇÝN HERHANGÝ BÝR GARANTÝ VERÝLMEMEKTEDÝR. HÝÇBÝR KOÞULDA sarmal.com VE/YA PAKETÝN YAZARI (Volkan Özçelik - volkan@sarmal.com) BU PAKETÝN KULLANIMI SONUCUNDA  OLUÞABÝLECEK, DOÐRUDAN, DOLAYLI YA DA RASTLANTISAL ZARARLARDAN SORUMLU TUTULAMAZ. KODUN HANGÝ AMAÇLA VE NE ÞEKÝLDE KULLANILACAÐI VE BU KULLANIMIN SONUCUNDA OLUÞACAK OLASI SONUÇLARIN SORUMLULUÐU  (BÖYLE BÝR OLASILIK DAHA ÖNCEDEN AÇIKÇA ÝFADE EDÝLMÝÞ OLSA BÝLE) TAMAMEN KULLANICIYA AÝTTÝR.
+
+7. sarmal.com, herhangi bir zamanda bu kullaným þartlarýný önceden bildirmeksizin deðiþtirebilir. Kullanýcý olarak siz, bu deðiþikliklerin sizi baðladýðýný kabul edersiniz.
+
+
+s@rdalya'yý yararlý bulacaðýný umuyor, öneri ve görüþlerini bekliyorum (bilgi@sarmal.com)
+
+s@rdalya'nýn en yeni sürümü için http://www.sarmal.com'u ziyaret etmeyi unutma!
+
+sarmal.com
+"Gerçeði gerçekten bilmek isteyenlere !"
